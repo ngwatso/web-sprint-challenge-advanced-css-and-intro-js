@@ -300,10 +300,22 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */) {
-  /* Code here */
+function addArtist(num1) {
+  artists.push(
+    (newArtist = {
+      id: 21,
+      name: "Nick Watson",
+      years: "1979 - 2020",
+      genre: "Web Design",
+      nationality: "American",
+      bio:
+        "Nick Watson was perhaps the most influential web designer of his time.  He went on to win the Nobel Peace Prize for his work at Lambda School.",
+    })
+  );
+  console.log(artists[num1]);
 }
 
+addArtist(20);
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -312,9 +324,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */) {
-  /* Code here */
+function lotsOfArt(array) {
+  const overOneHundred = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].paintings > 100) {
+      overOneHundred.push(array[i]);
+    }
+  }
+  console.log(overOneHundred);
 }
+
+lotsOfArt(artists);
 
 // 🎨🎨 STRETCH 🎨🎨//
 
