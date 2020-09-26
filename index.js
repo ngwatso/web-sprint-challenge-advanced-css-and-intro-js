@@ -260,8 +260,8 @@ getArtistByIndex(artists, 0);
 function get20s(array, year1, year2) {
   const twentiethCentury = [];
 
-  for (i = 0; i < array.length; i++) {
-    if (array[i].years.includes(year1)) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].years >= year1 && array[i].years <= year2) {
       twentiethCentury.push();
     }
   }
@@ -300,7 +300,7 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(num1) {
+function addArtist() {
   artists.push(
     (newArtist = {
       id: 21,
@@ -312,10 +312,10 @@ function addArtist(num1) {
         "Nick Watson was perhaps the most influential web designer of his time.  He went on to win the Nobel Peace Prize for his work at Lambda School.",
     })
   );
-  console.log(artists[num1]);
+  console.log(artists);
 }
 
-addArtist(20);
+addArtist();
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
