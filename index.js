@@ -261,14 +261,17 @@ function get20s(array, year1, year2) {
   const twentiethCentury = [];
 
   for (let i = 0; i < array.length; i++) {
-    if (array[i].years >= year1 && array[i].years <= year2) {
-      twentiethCentury.push();
+    if (
+      array[i].years.split(" ") >= year1 &&
+      array[i].years.split(" ") <= year2
+    ) {
+      twentiethCentury.push(array[i].name);
     }
   }
-  console.log(twentiethCentury);
+  return twentiethCentury;
 }
 
-get20s(artists, 1900, 2000);
+console.log(get20s(artists, 1900, 2000));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
