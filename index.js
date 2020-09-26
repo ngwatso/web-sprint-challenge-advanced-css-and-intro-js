@@ -262,8 +262,11 @@ function get20s(array, year1, year2) {
 
   for (let i = 0; i < array.length; i++) {
     if (
-      array[i].years.split(" ") >= year1 &&
-      array[i].years.split(" ") <= year2
+      parseInt(array[i].years, 10) >= year1 &&
+      parseInt(array[i].years, 10) <= year2
+
+      // array[i].years.split(" ") >= year1 &&
+      // array[i].years.split(" ") <= year2
     ) {
       twentiethCentury.push(array[i].name);
     }
